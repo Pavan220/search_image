@@ -30,7 +30,14 @@ class ImgContent extends Component {
       <div className="container">
         {this.state.jsondata.length !== 0 ? (
           this.state.jsondata.map((val) => {
-            return <img alt="img" key={val.id} src={val.urls.small} />;
+            return (
+              <img
+                className="images"
+                alt="img"
+                key={val.id}
+                src={val.urls.small}
+              />
+            );
           })
         ) : (
           <h1>Loading...</h1>
